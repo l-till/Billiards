@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0jj6c2rcjhjb"]
+[gd_scene format=3 uid="uid://b0jj6c2rcjhjb"]
 
 [ext_resource type="FontFile" uid="uid://br3y0legub141" path="res://assets/Xolonium-Regular.ttf" id="1_8g0es"]
-[ext_resource type="Script" path="res://Main/ui.gd" id="1_r2sf6"]
+[ext_resource type="Script" uid="uid://d1fb6f2gfiu2p" path="res://main/ui.gd" id="1_r2sf6"]
 [ext_resource type="Texture2D" uid="uid://h31v0jnfe85b" path="res://assets/bar_green.png" id="2_bhol3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_emius"]
