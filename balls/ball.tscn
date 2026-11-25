@@ -1,25 +1,22 @@
 [gd_scene format=3 uid="uid://dsy63fbueyr5n"]
 
-[ext_resource type="Script" uid="uid://dn2kyvs2kh5eb" path="res://main/ball.gd" id="1_706ys"]
-[ext_resource type="PackedScene" uid="uid://b1w7428towt4e" path="res://balls/ball_assets/ball_glb/1ball.glb" id="2_hcq3s"]
+[ext_resource type="Script" uid="uid://dn2kyvs2kh5eb" path="res://balls/ball.gd" id="1_706ys"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1424j"]
-friction = 0.5
-bounce = 0.15
+friction = 0.2
+bounce = 0.9
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wmrr7"]
 radius = 0.028181942
 
 [node name="Ball" type="RigidBody3D" unique_id=1629362985]
+collision_mask = 3
+mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_1424j")
 continuous_cd = true
 linear_damp = 0.5
 angular_damp = 1.0
 script = ExtResource("1_706ys")
 
-[node name="1ball" parent="." unique_id=176978784 instance=ExtResource("2_hcq3s")]
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=28021389]
 shape = SubResource("SphereShape3D_wmrr7")
-
-[editable path="1ball"]

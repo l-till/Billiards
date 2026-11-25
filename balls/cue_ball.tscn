@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://e3tjnn4nvska"]
+
+[ext_resource type="PackedScene" uid="uid://dsy63fbueyr5n" path="res://balls/ball.tscn" id="1_p4dqt"]
+[ext_resource type="PackedScene" uid="uid://cba5cbvlpj2fk" path="res://balls/ball_assets/ball_glb/cue_ball.glb" id="2_0h2bs"]
+
+[node name="CueBall" unique_id=1629362985 instance=ExtResource("1_p4dqt")]
+is_cue_ball = true
+
+[node name="cue_ball" parent="." index="1" unique_id=45616463 instance=ExtResource("2_0h2bs")]

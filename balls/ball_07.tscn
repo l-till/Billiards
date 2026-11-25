@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://denxsr7ddnstx"]
+
+[ext_resource type="PackedScene" uid="uid://dsy63fbueyr5n" path="res://balls/ball.tscn" id="1_hurh2"]
+[ext_resource type="PackedScene" uid="uid://wtnxpymb40q5" path="res://balls/ball_assets/ball_glb/7ball.glb" id="2_asdua"]
+
+[node name="Ball07" unique_id=1629362985 instance=ExtResource("1_hurh2")]
+
+[node name="7ball" parent="." index="1" unique_id=1589345382 instance=ExtResource("2_asdua")]

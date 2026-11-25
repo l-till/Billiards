@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b5rgmym2b4yi5"]
+
+[ext_resource type="PackedScene" uid="uid://dsy63fbueyr5n" path="res://balls/ball.tscn" id="1_ed15c"]
+[ext_resource type="PackedScene" uid="uid://cj46egq54beew" path="res://balls/ball_assets/ball_glb/6ball.glb" id="2_feg28"]
+
+[node name="Ball06" unique_id=1629362985 instance=ExtResource("1_ed15c")]
+
+[node name="6ball" parent="." index="1" unique_id=1700851529 instance=ExtResource("2_feg28")]

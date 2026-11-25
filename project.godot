@@ -19,6 +19,12 @@ config/icon="res://assets/icon.svg"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[layer_names]
+
+3d_physics/layer_1="table"
+3d_physics/layer_2="balls"
+3d_physics/layer_3="cue"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

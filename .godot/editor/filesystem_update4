@@ -1,3 +1,12 @@
-res://assets/icon.svg
-res://assets/ball_normal_map.png
+res://table/table.tscn
 res://main/ball.tscn
+res://main/ball.gd
+res://balls/ball_01.tscn
+res://assets/Holes/hole.tscn
+res://balls/ball_02.tscn
+res://balls/ball_03.tscn
+res://balls/ball_04.tscn
+res://balls/ball.tscn
+res://balls/cue_ball.tscn
+res://main/main.tscn
+res://main/main.gd
