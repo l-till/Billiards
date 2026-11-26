@@ -2,10 +2,88 @@
 
 [ext_resource type="Script" uid="uid://dmv0kjo3k4lfv" path="res://main/main.gd" id="1_53q0u"]
 [ext_resource type="PackedScene" uid="uid://c2bk5muvhew2w" path="res://table/table.tscn" id="2_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://bwrggc7bq1djb" path="res://balls/ball_01.tscn" id="3_4hmqs"]
+[ext_resource type="PackedScene" uid="uid://c07vpx5mff8he" path="res://cue/cue.tscn" id="3_piupu"]
+[ext_resource type="PackedScene" uid="uid://bg5njbra6f4he" path="res://balls/ball_02.tscn" id="4_piupu"]
+[ext_resource type="PackedScene" uid="uid://hve3g2e3a2o2" path="res://balls/ball_03.tscn" id="5_q0sk7"]
+[ext_resource type="PackedScene" uid="uid://lp5eihun6vdy" path="res://balls/ball_04.tscn" id="6_vapsy"]
+[ext_resource type="PackedScene" uid="uid://bvle6vmxsu3rm" path="res://balls/ball_05.tscn" id="7_jofbb"]
+[ext_resource type="PackedScene" uid="uid://b5rgmym2b4yi5" path="res://balls/ball_06.tscn" id="8_re7it"]
+[ext_resource type="PackedScene" uid="uid://denxsr7ddnstx" path="res://balls/ball_07.tscn" id="9_oagth"]
+[ext_resource type="PackedScene" uid="uid://djo1tnou7d11c" path="res://balls/ball_08.tscn" id="10_n53tw"]
+[ext_resource type="PackedScene" uid="uid://b7tdl0d7xpx1l" path="res://balls/ball_09.tscn" id="11_d00gp"]
+[ext_resource type="PackedScene" uid="uid://60sgch6hcwpv" path="res://balls/ball_10.tscn" id="12_d8vpj"]
+[ext_resource type="PackedScene" uid="uid://ddloj85jcvqdh" path="res://balls/ball_11.tscn" id="13_qs5eo"]
+[ext_resource type="PackedScene" uid="uid://c4dvxauofb6nh" path="res://balls/ball_12.tscn" id="14_frbr6"]
+[ext_resource type="PackedScene" uid="uid://d2o0acj2h21qt" path="res://balls/ball_13.tscn" id="15_o8j3b"]
+[ext_resource type="PackedScene" uid="uid://ck2vvhsor518m" path="res://balls/ball_14.tscn" id="16_wpkmi"]
+[ext_resource type="PackedScene" uid="uid://dfnqv36pws2wm" path="res://balls/ball_15.tscn" id="17_o0l78"]
+[ext_resource type="PackedScene" uid="uid://e3tjnn4nvska" path="res://balls/cue_ball.tscn" id="18_576ah"]
 
 [node name="Main" type="Node3D" unique_id=1621885211]
 script = ExtResource("1_53q0u")
 
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1282823456]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0, 1.2442404, 0.12800676)
+
 [node name="Table" parent="." unique_id=2123983027 instance=ExtResource("2_pjrb6")]
 
+[node name="Cue" parent="." unique_id=16966220 instance=ExtResource("3_piupu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.10354254, 0.7716212)
+
 [node name="Balls" type="Node3D" parent="." unique_id=1639420544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10391581, 0)
+
+[node name="Ball01" parent="Balls" unique_id=1629362985 instance=ExtResource("3_4hmqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5372096)
+
+[node name="Ball02" parent="Balls" unique_id=858048212 instance=ExtResource("4_piupu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.058, 0, -0.7409406)
+
+[node name="Ball03" parent="Balls" unique_id=547270121 instance=ExtResource("5_q0sk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029, 0, -0.69)
+
+[node name="Ball04" parent="Balls" unique_id=561110708 instance=ExtResource("6_vapsy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029, 0, -0.69)
+
+[node name="Ball05" parent="Balls" unique_id=390048634 instance=ExtResource("7_jofbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.058, 0, -0.637)
+
+[node name="Ball06" parent="Balls" unique_id=1702536073 instance=ExtResource("8_re7it")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.058, 0, -0.637)
+
+[node name="Ball07" parent="Balls" unique_id=1022096020 instance=ExtResource("9_oagth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05776218, 0, -0.74057436)
+
+[node name="Ball08" parent="Balls" unique_id=1635368135 instance=ExtResource("10_n53tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.63718545)
+
+[node name="Ball09" parent="Balls" unique_id=1718502105 instance=ExtResource("11_d00gp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.087, 0, -0.69)
+
+[node name="Ball10" parent="Balls" unique_id=1179530816 instance=ExtResource("12_d8vpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.087, 0, -0.69)
+
+[node name="Ball11" parent="Balls" unique_id=19553283 instance=ExtResource("13_qs5eo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028, 0, -0.587)
+
+[node name="Ball12" parent="Balls" unique_id=643145935 instance=ExtResource("14_frbr6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115, 0, -0.7399406)
+
+[node name="Ball13" parent="Balls" unique_id=569824081 instance=ExtResource("15_o8j3b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.73934525)
+
+[node name="Ball14" parent="Balls" unique_id=2048496909 instance=ExtResource("16_wpkmi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030295089, 0, -0.58705884)
+
+[node name="Ball15" parent="Balls" unique_id=1019014741 instance=ExtResource("17_o0l78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115, 0, -0.7399406)
+
+[node name="CueBall" parent="Balls" unique_id=1337555856 instance=ExtResource("18_576ah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7776624)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=346657452]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 16.737984, 0)
+
+[editable path="Table"]
+[editable path="Table/table"]

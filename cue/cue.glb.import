@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cesn0shefdata"
-path="res://.godot/imported/cue.glb-2f032c044f81824cbd329930be9a080f.scn"
+path="res://.godot/imported/cue.glb-4699c43e96f38aa5a3c993f67422ff06.scn"
 
 [deps]
 
-source_file="res://que/cue.glb"
-dest_files=["res://.godot/imported/cue.glb-2f032c044f81824cbd329930be9a080f.scn"]
+source_file="res://cue/cue.glb"
+dest_files=["res://.godot/imported/cue.glb-4699c43e96f38aa5a3c993f67422ff06.scn"]
 
 [params]
 

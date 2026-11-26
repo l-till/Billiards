@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c2bk5muvhew2w"]
 
+[ext_resource type="Script" uid="uid://crc5a5wn1oaef" path="res://table/table.gd" id="1_ptjb6"]
 [ext_resource type="PackedScene" uid="uid://bcbhomjyfb2fl" path="res://table/table.glb" id="1_r5hyl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_65f5o"]
@@ -22,6 +23,7 @@ size = Vector3(15.742798, 0.59973145, 14.687622)
 [node name="Table" type="RigidBody3D" unique_id=2123983027]
 physics_material_override = SubResource("PhysicsMaterial_65f5o")
 freeze = true
+script = ExtResource("1_ptjb6")
 
 [node name="table" parent="." unique_id=2093078697 instance=ExtResource("1_r5hyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03344333, 0, 0.123366594)
@@ -30,60 +32,64 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03344333, 0, 0.123366594)
 transform = Transform3D(1.37, 0, 0, 0, 0.3, 0, 0, 0, 2.74, 0.03344333, 0, 0.123366594)
 shape = SubResource("ConcavePolygonShape3D_ptjb6")
 
-[node name="Hole" type="Area3D" parent="." unique_id=1946841178]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6215337, -0.19053316, 0.12830386)
+[node name="Pockets" type="Node3D" parent="." unique_id=822044540]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hole" unique_id=2122578688]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0603122, 0)
-shape = SubResource("CylinderShape3D_i2265")
-
-[node name="Hole2" type="Area3D" parent="." unique_id=733788605]
+[node name="P1" type="Area3D" parent="Pockets" unique_id=733788605]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61980253, -0.19053316, 1.377635)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hole2" unique_id=1383536136]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pockets/P1" unique_id=1383536136]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0603122, 0)
 shape = SubResource("CylinderShape3D_i2265")
 
-[node name="Hole3" type="Area3D" parent="." unique_id=706208519]
+[node name="P2" type="Area3D" parent="Pockets" unique_id=1946841178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6215337, -0.19053316, 0.12830389)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pockets/P2" unique_id=2122578688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0603122, 0)
+shape = SubResource("CylinderShape3D_i2265")
+
+[node name="P3" type="Area3D" parent="Pockets" unique_id=706208519]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6239279, -0.19053316, -1.1351917)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hole3" unique_id=2063533852]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pockets/P3" unique_id=2063533852]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0603122, 0)
 shape = SubResource("CylinderShape3D_i2265")
 
-[node name="Hole4" type="Area3D" parent="." unique_id=1737166512]
+[node name="P4" type="Area3D" parent="Pockets" unique_id=1737166512]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5427796, -0.19053316, -1.2018809)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hole4" unique_id=864964677]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pockets/P4" unique_id=864964677]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0603122, 0)
 shape = SubResource("CylinderShape3D_i2265")
 
-[node name="Hole5" type="Area3D" parent="." unique_id=995146844]
+[node name="P5" type="Area3D" parent="Pockets" unique_id=995146844]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54813117, -0.19053316, 0.118008494)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hole5" unique_id=42895292]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pockets/P5" unique_id=42895292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0603122, 0)
 shape = SubResource("CylinderShape3D_i2265")
 
-[node name="Hole6" type="Area3D" parent="." unique_id=1154486979]
+[node name="P6" type="Area3D" parent="Pockets" unique_id=1154486979]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54813117, -0.19053316, 1.3630129)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hole6" unique_id=1197662226]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pockets/P6" unique_id=1197662226]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0603122, 0)
 shape = SubResource("CylinderShape3D_i2265")
 
-[node name="Kitchen" type="Area3D" parent="." unique_id=970954185]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07748091, 1)
+[node name="Spawns" type="Node3D" parent="." unique_id=1617746050]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kitchen" unique_id=760201989]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033447266, 0.015026361, 0.08542633)
-shape = SubResource("BoxShape3D_65f5o")
-
-[node name="HeadSpot" type="Marker3D" parent="." unique_id=759449927]
+[node name="HeadSpot" type="Marker3D" parent="Spawns" unique_id=759449927]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0740009, 0.775727)
 
-[node name="FootSpot" type="Marker3D" parent="." unique_id=1790756235]
+[node name="FootSpot" type="Marker3D" parent="Spawns" unique_id=1790756235]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0740009, -0.53195894)
+
+[node name="Kitchen" type="Area3D" parent="Spawns" unique_id=970954185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07748091, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spawns/Kitchen" unique_id=760201989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033447266, 0.015026361, 0.08542633)
+shape = SubResource("BoxShape3D_65f5o")
 
 [node name="CatchFloor" type="Area3D" parent="." unique_id=571399976]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93393004, 0)
