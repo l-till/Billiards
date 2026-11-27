@@ -1,62 +1,39 @@
 # main.gd
 extends Node3D
 
-#
-const BALL_DIAMETER := 0.05715
+# Cameras
+@onready var overview_camera: Camera3D = $Camera3D
+@onready var aiming_camera: Camera3D = $Cue/Camera3D
 
-#
-var cue_ball_scene: PackedScene = preload("res://balls/cue_ball.tscn")
-var ball_scenes: Array[PackedScene] = [
-	preload("res://balls/ball_01.tscn"),
-	preload("res://balls/ball_02.tscn"),
-	preload("res://balls/ball_03.tscn"),
-	preload("res://balls/ball_04.tscn"),
-	preload("res://balls/ball_05.tscn"),
-	preload("res://balls/ball_06.tscn"),
-	preload("res://balls/ball_07.tscn"),
-	preload("res://balls/ball_08.tscn"),
-	preload("res://balls/ball_09.tscn"),
-	preload("res://balls/ball_10.tscn"),
-	preload("res://balls/ball_11.tscn"),
-	preload("res://balls/ball_12.tscn"),
-	preload("res://balls/ball_13.tscn"),
-	preload("res://balls/ball_14.tscn"),
-	preload("res://balls/ball_15.tscn"),
-	preload("res://balls/cue_ball.tscn")
-]
-@onready var table = $Table
-@onready var balls_root = $Balls
+# Ball container
+@onready var balls_container: Node3D = $Balls
 
-#
+
 func _ready() -> void:
-	table.ball_potted.connect(_on_ball_potted)
-	_spawn_cue_ball()
-	_rack_balls()
+	# Start with the overview camera
+	overview_camera.make_current()
 
-func _spawn_cue_ball() -> void:
-	var cue_ball = cue_ball_scene.instantiate()
-	balls_root.add_child(cue_ball)
-	cue_ball.global_position = table.get_node("Spawns/HeadSpot").global_position
+	# Register balls into groups
+	_setup_ball_groups()
 
-func _rack_balls() -> void:
-	var origin: Vector3 = table.get_node("Spawns/FootSpot").global_position
-	var row_step := BALL_DIAMETER * 0.866   # sqrt(3)/2 spacing between rows
-	var i := 0
-	for row in range(5):
-		for col in range(row + 1):
-			var ball = ball_scenes[i].instantiate()
-			balls_root.add_child(ball)
-			ball.global_position = origin + Vector3(
-				row * row_step,
-				0,
-				(col - row / 2.0) * BALL_DIAMETER
-			)
-			i += 1
 
-func _on_ball_potted(ball: Node3D) -> void:
-	if ball.is_in_group("cue_ball"):
-		ball.queue_free()
-		await get_tree().create_timer(1.0).timeout
-		_spawn_cue_ball()
+func _process(_delta: float) -> void:
+	# Switch cameras
+	if Input.is_action_just_pressed("switch_camera"):
+		_switch_camera()
+
+
+func _switch_camera() -> void:
+	if overview_camera.is_current():
+		aiming_camera.make_current()
 	else:
-		ball.queue_free()
+		overview_camera.make_current()
+
+
+func _setup_ball_groups() -> void:
+	for ball in balls_container.get_children():
+
+		if ball.name == "CueBall":
+			ball.add_to_group("cue_ball")
+		else:
+			ball.add_to_group("object_ball")

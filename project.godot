@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Billiards"
+run/main_scene="uid://bartimdagu6n1"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [filesystem]
 

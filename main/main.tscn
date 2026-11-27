@@ -36,54 +36,73 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10391581, 0)
 
 [node name="Ball01" parent="Balls" unique_id=1629362985 instance=ExtResource("3_4hmqs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5372096)
+collision_layer = 1
 
 [node name="Ball02" parent="Balls" unique_id=858048212 instance=ExtResource("4_piupu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.058, 0, -0.7409406)
+collision_layer = 1
 
 [node name="Ball03" parent="Balls" unique_id=547270121 instance=ExtResource("5_q0sk7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029, 0, -0.69)
+collision_layer = 1
 
 [node name="Ball04" parent="Balls" unique_id=561110708 instance=ExtResource("6_vapsy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029, 0, -0.69)
+collision_layer = 1
 
 [node name="Ball05" parent="Balls" unique_id=390048634 instance=ExtResource("7_jofbb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.058, 0, -0.637)
+collision_layer = 1
 
 [node name="Ball06" parent="Balls" unique_id=1702536073 instance=ExtResource("8_re7it")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.058, 0, -0.637)
+collision_layer = 1
 
 [node name="Ball07" parent="Balls" unique_id=1022096020 instance=ExtResource("9_oagth")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05776218, 0, -0.74057436)
+collision_layer = 1
 
 [node name="Ball08" parent="Balls" unique_id=1635368135 instance=ExtResource("10_n53tw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.63718545)
+collision_layer = 1
 
 [node name="Ball09" parent="Balls" unique_id=1718502105 instance=ExtResource("11_d00gp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.087, 0, -0.69)
+collision_layer = 1
 
 [node name="Ball10" parent="Balls" unique_id=1179530816 instance=ExtResource("12_d8vpj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.087, 0, -0.69)
+collision_layer = 1
 
 [node name="Ball11" parent="Balls" unique_id=19553283 instance=ExtResource("13_qs5eo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028, 0, -0.587)
+collision_layer = 1
 
 [node name="Ball12" parent="Balls" unique_id=643145935 instance=ExtResource("14_frbr6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115, 0, -0.7399406)
+collision_layer = 1
 
 [node name="Ball13" parent="Balls" unique_id=569824081 instance=ExtResource("15_o8j3b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.73934525)
+collision_layer = 1
 
 [node name="Ball14" parent="Balls" unique_id=2048496909 instance=ExtResource("16_wpkmi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030295089, 0, -0.58705884)
+collision_layer = 1
 
 [node name="Ball15" parent="Balls" unique_id=1019014741 instance=ExtResource("17_o0l78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115, 0, -0.7399406)
+collision_layer = 1
 
 [node name="CueBall" parent="Balls" unique_id=1337555856 instance=ExtResource("18_576ah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7776624)
+collision_layer = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=346657452]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 16.737984, 0)
+transform = Transform3D(1, 0, 0, 0, -0.3760485, 0.9266, 0, -0.92660004, -0.3760485, 0, 16.737984, -5.312228)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=58602321]
+transform = Transform3D(1, 0, 0, 0, 0.42974252, 0.9029515, 0, -0.9029515, 0.42974252, 0, 16.737984, 6.736307)
 
 [editable path="Table"]
 [editable path="Table/table"]

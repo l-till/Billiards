@@ -3,13 +3,14 @@
 [ext_resource type="Script" uid="uid://dn2kyvs2kh5eb" path="res://balls/ball.gd" id="1_706ys"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1424j"]
-friction = 0.2
+friction = 0.7
 bounce = 0.9
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wmrr7"]
 radius = 0.028181942
 
 [node name="Ball" type="RigidBody3D" unique_id=1629362985]
+collision_layer = 2
 collision_mask = 3
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_1424j")

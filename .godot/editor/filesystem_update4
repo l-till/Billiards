@@ -1,6 +1,1 @@
-res://cue/cue.tscn
-res://cue/cue.gd
-res://main/main.tscn
-res://main/main.gd
-res://table/table.tscn
-res://table/table.gd
+res://balls/ball.gd

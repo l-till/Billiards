@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://bartimdagu6n1"]
+
+[ext_resource type="Script" uid="uid://crfxwb6n3frlg" path="res://title/title.gd" id="1_crako"]
+[ext_resource type="Texture2D" uid="uid://b2xoj50dmlcbo" path="res://title/title_assets/pool table.png" id="1_yx5l7"]
+
+[sub_resource type="Theme" id="Theme_title"]
+default_font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_g1dw6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+bg_color = Color(0.0431373, 0.172549, 0.14902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.933333, 0.721569, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+bg_color = Color(0.831373, 0.603922, 0.239216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.870588, 0.580392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
+bg_color = Color(0.65098, 0.294118, 0.129412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.870588, 0.580392, 1)
+
+[node name="Title" type="Control" unique_id=704734288]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_title")
+script = ExtResource("1_crako")
+
+[node name="Backdrop" type="TextureRect" parent="." unique_id=1175993408]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_yx5l7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Tint" type="ColorRect" parent="." unique_id=514520730]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0392157, 0.0862745, 0.0941176, 0.64)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1332248843]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="VBoxContainer" parent="CenterContainer" unique_id=1559565323]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="GameTitle" type="Label" parent="CenterContainer/Menu" unique_id=663710719]
+visible = false
+custom_minimum_size = Vector2(230, 46)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.862745, 0.580392, 1)
+theme_override_font_sizes/font_size = 23
+text = "Escape from
+ Wizard Mountain"
+label_settings = SubResource("LabelSettings_g1dw6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="CenterContainer/Menu" unique_id=1218825228]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.960784, 0.839216, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+text = "Play"
+
+[node name="ExitButton" type="Button" parent="CenterContainer/Menu" unique_id=1574458322]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.960784, 0.839216, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+text = "Exit"
+
+[connection signal="pressed" from="CenterContainer/Menu/PlayButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/Menu/ExitButton" to="." method="_on_exit_pressed"]
